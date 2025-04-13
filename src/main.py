@@ -1,4 +1,3 @@
-# main.py or preprocess.py
 import os
 import pandas as pd
 import numpy as np
@@ -22,7 +21,7 @@ from src.preprocessing import (
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
 def preprocess() -> pd.DataFrame:
-    # Define file paths (assuming your CSVs are in the data/ folder)
+    # Define file paths
     financial_filepath = os.path.join("data", "merged_fullstock_data.csv")
     sp500_filepath = os.path.join("data", "sp.csv")
     stock_prices_filepath = os.path.join("data", "adjclose_stock.csv")
@@ -47,17 +46,16 @@ def preprocess() -> pd.DataFrame:
     symbols_to_keep = filtered_stock_prices['Stock'].unique().tolist()
     final_df = filter_final_data_by_symbols(final_df, symbols_to_keep)
     
-    # Additional filtering based on criteria (e.g., minimum quarter_number)
+    # Additional filtering based on criteria
     final_df = final_df[final_df.groupby('symbol_stock')['quarter_number'].transform(lambda x: (x > 20).any())]
     final_df = final_df.reset_index(drop=True)
 
     final_df = final_df[final_df.groupby('symbol_stock')['Adj Close'].transform(lambda x: (x > 14).any())]
     final_df = final_df.reset_index(drop=True)
     
-    # Instead of saving, return the DataFrame.
+    # Return the DataFrame
     return final_df
 
 if __name__ == "__main__":
-    # For direct execution, you can print or inspect the DataFrame.
     df_final = preprocess()
     print("Final processed DataFrame shape:", df_final.shape)
