@@ -14,6 +14,8 @@ Backtesting demonstrates reasonable cumulative portfolio returns with controlled
 
 Feature importance analysis reveals that liquidity (e.g., cash ratio) and profitability (e.g., EPS and its lagged versions) are key drivers in predicting stock performance.
 
+![Backtest for Financial Services after winsorization](./images/finsrvcs_win_backtest.png)
+
 ### Data Sources
 - The trading day price data was obtained via the yfinance package for Python. Sincere appreciation for their work!
 https://pypi.org/project/yfinance/
