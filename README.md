@@ -16,6 +16,11 @@ Combine quarterly financial statements with stock price and S&P500 benchmark dat
 
 ![Backtest for Financial Services after winsorization](./images/finsrvcs_win_backtest.png)
 
+
+## Table of Contents
+- [Problem Statement & Motivation](#problem-statement--motivation)
+- [Data Sources & Description](#data-sources--description)
+
 ### Problem Statement & Motivation
 Growing up in the New York City metropolitan area, I’ve always been fascinated by Wall Street’s dynamic interplay of market forces and corporate strategy. As an investor, even the smallest stake connects you to a company’s journey—its boardroom decisions, its operational pivots, and the market’s reaction. During my undergraduate studies in Economics, I deepened my appreciation for microeconomic theory and business dynamics. Now, as a data scientist, I’m applying that foundation to ask: Which companies are truly healthy, and which ones are financially unstable?
 
