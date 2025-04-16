@@ -16,6 +16,14 @@ Feature importance analysis reveals that liquidity (e.g., cash ratio) and profit
 
 ![Backtest for Financial Services after winsorization](./images/finsrvcs_win_backtest.png)
 
+### Problem Statement & Motivation
+Growing up in the New York City metropolitan area, I’ve always been fascinated by Wall Street’s dynamic interplay of market forces and corporate strategy. As a retail investor, even the smallest stake connects you to a company’s journey—its boardroom decisions, its operational pivots, and the market’s reaction. During my undergraduate studies in Economics, I deepened my appreciation for microeconomic theory and business dynamics. Now, as a data scientist, I’m applying that foundation to ask: Which companies are truly healthy, and which ones are financially unstable?
+
+Most quantitative investment strategies lean heavily on price trends and technical indicators—an approach that often overlooks the fundamentals driving long‑term value. In this capstone project, I take a different tack: I merge 25 years of quarterly financial statements (income, balance sheet, and cash flow data) with adjusted closing prices to extract key ratios and signals of corporate stability. My objective is not to chase short‑term market swings but to identify “unhealthy” stocks—that is, those likely to underperform the S&P 500 over the next 90 days—and avoid them.
+
+Given the high stakes in finance, I **prioritize recall on unfavorable outcomes: it’s more damaging to buy a weak stock than to miss a few winners**. I generate a binary “good”/“bad” signal and train a Random Forest classifier on engineered features—liquidity metrics, profitability ratios, and trend-based lags and rolling averages. An enhanced backtest then simulates a conservative portfolio strategy under realistic trading conditions (transaction costs, slippage, stop‑loss/take‑profit rules, and holding‑period limits). The result is a data‑driven framework for constructing a robust, risk‑aware portfolio that steers clear of financial underperformers.
+
+
 ### Data Sources
 - The trading day price data was obtained via the yfinance package for Python. Sincere appreciation for their work!
 https://pypi.org/project/yfinance/
