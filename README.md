@@ -25,14 +25,17 @@ Given the high stakes in finance, I **prioritize recall on unfavorable outcomes:
 
 ### Data Sources and Description
 This project leverages two primary data sources to build a comprehensive and robust dataset:
-    • Quarterly Financial Statements
-        ○ Source: Financial Modeling Prep API (financialmodelingprep.com)
-        ○ Content: Provides detailed quarterly financial data, including variables such as net income, total assets, liabilities, revenue, and operating cash flow, among others.
-        ○ Scope: Covers several decades of historical data across a diverse range of publicly traded companies.
-    • Market Prices and Benchmark Data
-        ○ Source: yfinance Python package (pypi.org/project/yfinance)
-        ○ Content: Supplies adjusted closing prices and additional market details necessary for calculating market capitalization, historical returns, and future price movements.
-        ○ Benchmark Integration: Includes historical price data for the S&P 500 index, enabling comparison and benchmarking of individual stock performance.
-        ○ Methodology: An as-of merge technique was used to accurately align quarterly financial data with the relevant price and benchmark data, ensuring realistic modeling conditions.
-        
+
+- Quarterly Financial Statements
+    - Source: Financial Modeling Prep API (financialmodelingprep.com)
+    - Content: Provides detailed quarterly financial data, including variables such as net income, total assets, liabilities, revenue, and operating cash flow, among others.
+    - Scope: Covers several decades of historical data across a diverse range of publicly traded companies.
+
+- Market Prices and Benchmark Data
+    - Source: yfinance Python package (pypi.org/project/yfinance)
+    - Content: Supplies adjusted closing prices and additional market details necessary for calculating market capitalization, historical returns, and future price movements.
+    - Benchmark Integration: Includes historical price data for the S&P 500 index, enabling comparison and benchmarking of individual stock performance.
+
+Methodology: An as-of merge technique was used to accurately align quarterly financial data with the relevant price and benchmark data, ensuring realistic modeling conditions.
+
 Sincere appreciation to the developers and maintainers of these valuable resources.
